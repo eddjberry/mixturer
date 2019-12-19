@@ -1,6 +1,7 @@
 Package: mixturer
 Type: Package
-Title: Fit Mixture Models for Continuous Response Data
+Title: Mixture Models for Analogue Response Data
+Date: 2019-12-19
 Version: 0.1.0
 Authors@R: c(
     person("Berry", "Ed", , "eddjberry@gmail.com", c("aut", "cre", "trl")),
