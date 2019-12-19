@@ -1,9 +1,4 @@
----
-title: 'mixturer'
-output:
-  html_document:
-    keep_md: true
----
+# mixturer
 
 ## Overview
 
