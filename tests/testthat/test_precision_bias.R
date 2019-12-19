@@ -18,14 +18,14 @@ test_that('cir_precision is correct', {
 })
 
 
-# JV10_error
+# bays_2009_error
 
 test_that('cir_precision is correct', {
   df_expected <-
     data.frame(precision = 96.3414991002543, bias = 0.000237071797288786)
 
   df_output <-
-    JV10_error(df_test_von_mises$response, df_test_von_mises$target)
+    bays_2009_error(df_test_von_mises$response, df_test_von_mises$target)
 
   expect_equal(df_output, df_expected)
 })

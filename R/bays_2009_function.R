@@ -1,5 +1,5 @@
 # Translated into R by Ed D. J. Berry (github.com/eddjberry)
-# from functions written by Paul Bays (paulbays.com) in Matlab
+# from functions written by Paul Bays (paulbays_2009.com) in Matlab
 
 # Ref: Bays PM, Catalao RFG & Husain M. The precision of visual working
 # memory is set by allocation of a shared resource. Journal of Vision
@@ -10,11 +10,11 @@
 # Returns a list where the first element in a single row data frame
 # of parameter estimates and the second is a single log likelihood value
 
-#' JV10_function
+#' bays_2009_function
 #'
-#' \code{JV10_function}
+#' \code{bays_2009_function}
 #'
-#' @inheritParams JV10_fit
+#' @inheritParams bays_2009_fit
 #' @param B_start starting params
 #'
 #' @references Adapted from Matlab code by Paul Bays (https://www.paulbays.com/code.php)
@@ -22,10 +22,10 @@
 # memory is set by allocation of a shared resource. Journal of Vision
 # 9(10): 7, 1-11 (2009)
 #'
-#' @export
+#'
 #'
 
-JV10_function <- function(X, Tg,
+bays_2009_function <- function(X, Tg,
                           NT = replicate(NROW(X), 0),
                           B_start = NULL) {
 
@@ -57,9 +57,9 @@ JV10_function <- function(X, Tg,
   E = wrap(X - Tg)
 
   if(nn > 0){
-    NE = wrap(repmat(X, nn) - NT)
+    NE = wrap(replicate(nn, X, 'matrix') - NT)
   } else {
-    NE = repmat(X, nn)
+    NE = replicate(nn, X, 'matrix')
   }
 
   LL = 0; dLL = 1; iter = 1
@@ -89,7 +89,7 @@ JV10_function <- function(X, Tg,
     Pn = sum(rowSums(Wn) / W) / n
     Pu = sum(Wg / W) / n
 
-    rw = c((Wt / W), (Wn / repmat(W, nn)))
+    rw = c((Wt / W), (Wn / replicate(nn, W, 'matrix')))
 
     S = c(sin(E), sin(NE)) ; C = c(cos(E), cos(NE))
     r = c(sum(sum(S * rw)), sum(sum(C * rw)))
@@ -112,7 +112,7 @@ JV10_function <- function(X, Tg,
 
 
   if(iter > max_iter) {
-    warning('JV10_function:MaxIter','Maximum iteration limit exceeded.', call. = FALSE)
+    warning('bays_2009_function:MaxIter','Maximum iteration limit exceeded.', call. = FALSE)
     B = c(NaN, NaN, NaN, NaN); LL = NaN
   } else {
     B = data.frame(K = K, Pt = Pt, Pn = Pn, Pu = Pu)

@@ -1,5 +1,5 @@
 # Translated into R by Ed D. J. Berry (github.com/eddjberry)
-# from functions written by Paul Bays (paulbays.com) in Matlab
+# from functions written by Paul Bays (paulbays_2009.com) in Matlab
 
 # This function maps the input values (y) onto the circular space -pi to pi.
 # If the inputs are in degrees then divide by 180*pi. However, if the degrees

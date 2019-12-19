@@ -1,5 +1,5 @@
 # Translated into R by Ed D. J. Berry (github.com/eddjberry)
-# from functions written by Paul Bays (paulbays.com) in Matlab
+# from functions written by Paul Bays (paulbays_2009.com) in Matlab
 
 # Ref: Bays PM, Catalao RFG & Husain M. The precision of visual working
 # memory is set by allocation of a shared resource. Journal of Vision
@@ -22,11 +22,11 @@
 
 # If the argument return.ll is true then it will also return log-likelihood
 
-#' JV10_df
+#' bays_2009_df
 #'
-#' \code{JV10_df}
+#' \code{bays_2009_df}
 #'
-#' @inheritParams JV10_error
+#' @inheritParams bays_2009_error
 #' @param NT non target matrix
 #' @param return.ll logic return log liklihood
 #'
@@ -38,7 +38,7 @@
 #' @export
 #'
 
-JV10_fit <- function(X, Tg, NT = replicate(NROW(X), 0), return.ll = TRUE) {
+bays_2009_fit <- function(X, Tg, NT = replicate(NROW(X), 0), return.ll = TRUE) {
   if(NCOL(X) > 2 | NCOL(Tg) > 1 | NROW(X) != NROW(Tg) | (any(NT != 0) & NROW(NT) != NROW(X) | NROW(NT) != NROW(Tg))) {
     stop("Error: Input not correctly dimensioned", call. = FALSE)
   }
@@ -59,7 +59,7 @@ JV10_fit <- function(X, Tg, NT = replicate(NROW(X), 0), return.ll = TRUE) {
   for(i in seq_along(K)) {
     for(j in seq_along(N)) {
       for(k in seq_along(U)) {
-        est_list = JV10_function(X = X, Tg = Tg, NT = NT, B_start = c(K[i], 1-N[j]-U[k], N[j], U[k]))
+        est_list = bays_2009_function(X = X, Tg = Tg, NT = NT, B_start = c(K[i], 1-N[j]-U[k], N[j], U[k]))
         if (est_list$ll > loglik & !is.nan(est_list$ll) ) {
           loglik = est_list$ll
           B = est_list$b

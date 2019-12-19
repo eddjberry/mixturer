@@ -12,7 +12,7 @@
 cir_sd <- function(x) {
 
   if(any(abs(x) > pi)) {
-    stop("Error: Input values must be in radians, range -pi to pi'", call. = FALSE)
+    stop("Input values must be in radians, range -pi to pi", call. = TRUE)
   }
 
   if(NROW(x) == 1) { x = t(x) }

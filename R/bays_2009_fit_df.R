@@ -1,6 +1,6 @@
-#' JV10_df
+#' bays_2009_fit_df
 #'
-#' \code{JV10_df}
+#' \code{bays_2009_fit_df}
 #'
 #' @param d dataframe
 #' @param id.var id variable string
@@ -16,7 +16,7 @@
 #' @export
 #'
 
-JV10_df <- function(d, id.var = "id", tar.var = "target", res.var = "response", nt.vars = NULL){
+bays_2009_fit_df <- function(d, id.var = "id", tar.var = "target", res.var = "response", nt.vars = NULL){
   id <- d[, id.var]
 
   l <- split(d, id)
@@ -30,10 +30,10 @@ JV10_df <- function(d, id.var = "id", tar.var = "target", res.var = "response", 
     Tg <- as.matrix(df[tar.var])
 
     if(is.null(nt.vars)) {
-      B <- JV10_fit(X, Tg, return.ll = FALSE)
+      B <- bays_2009_fit(X, Tg, return.ll = FALSE)
     } else {
       NT = as.matrix(df[,nt.vars])
-      B <- JV10_fit(X, Tg, NT, FALSE)
+      B <- bays_2009_fit(X, Tg, NT, FALSE)
     }
     id <- as.character(df[1, id.var])
     paras[i, 1] <- id

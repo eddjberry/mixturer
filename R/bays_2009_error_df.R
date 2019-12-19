@@ -1,8 +1,8 @@
-#' JV10_df
+#' bays_2009_df
 #'
-#' \code{JV10_df}
+#' \code{bays_2009_df}
 #'
-#' @inheritParams JV10_df
+#' @inheritParams bays_2009_df
 #'
 #' @references Adapted from Matlab code by Paul Bays (https://www.paulbays.com/code.php)
 #' Bays PM, Catalao RFG & Husain M. The precision of visual working
@@ -12,7 +12,7 @@
 #' @export
 #'
 
-JV10_df_error <- function(d, id.var = "id", tar.var = "target", res.var = "response"){
+bays_2009_df_error <- function(d, id.var = "id", tar.var = "target", res.var = "response"){
   id <- d[, id.var]
 
   l <- split(d, id)
@@ -25,7 +25,7 @@ JV10_df_error <- function(d, id.var = "id", tar.var = "target", res.var = "respo
     X <- as.matrix(df[, res.var])
     Tg <- as.matrix(df[tar.var])
 
-    B <- JV10_error(X, Tg)
+    B <- bays_2009_error(X, Tg)
 
     id <- as.character(df[1, id.var])
 

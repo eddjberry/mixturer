@@ -1,9 +1,9 @@
-#' JV10_error
+#' bays_2009_error
 #'
-#' \code{JV10_error}
+#' \code{bays_2009_error}
 #'
 #' @param X response vector radians
-#' @param Tg target orientationsin radians
+#' @param Tg target orientations in radians
 #'
 #' @references Adapted from Matlab code by Paul Bays (https://www.paulbays.com/code.php)
 #' Bays PM, Catalao RFG & Husain M. The precision of visual working
@@ -13,7 +13,7 @@
 #' @export
 #'
 
-JV10_error <- function(X, Tg = 0) {
+bays_2009_error <- function(X, Tg = 0) {
   if(any(abs(X) > pi) | any(abs(Tg) > pi)) {
     stop("Error: Input values must be in radians, range -PI to PI", call. = FALSE)
   }

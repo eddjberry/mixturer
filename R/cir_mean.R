@@ -13,7 +13,7 @@
 cir_mean <- function(x) {
 
   if(any(abs(x) > pi)) {
-    stop("Error: Input values must be in radians, range -pi to pi'", call. = FALSE)
+    stop("Input values must be in radians, range -pi to pi", call. = TRUE)
   }
 
   atan2(sum(sin(x)), sum(cos(x)))

@@ -1,4 +1,4 @@
-context('Mixture model')
+context('Bays mixture model')
 
 # might want to test for multiple values moving forward
 
@@ -7,7 +7,7 @@ test_data_path <- dir(getwd(), recursive = TRUE, pattern = "df_test_mixture_mode
 df_test_mixture_model <- readRDS(test_data_path)
 
 df_parameters <-
-  JV10_df(
+  bays_2009_fit_df(
     df_test_mixture_model,
     id.var = 'id',
     tar.var = 'target',

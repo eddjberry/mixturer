@@ -1,8 +1,8 @@
-#' JV10_likelihood
+#' bays_2009_likelihood
 #'
-#' \code{JV10_likelihood}
+#' \code{bays_2009_likelihood}
 #'
-#' @inheritParams JV10_fit
+#' @inheritParams bays_2009_fit
 #' @param B params
 #'
 #' @references Adapted from Matlab code by Paul Bays (https://www.paulbays.com/code.php)
@@ -10,10 +10,10 @@
 # memory is set by allocation of a shared resource. Journal of Vision
 # 9(10): 7, 1-11 (2009)
 #'
-#' @export
+#'
 #'
 
-JV10_likelihood <- function(B, X, Tg, NT = replicate(NROW(X), 0)) {
+bays_2009_likelihood <- function(B, X, Tg, NT = replicate(NROW(X), 0)) {
   if(NCOL(X) > 2 | NCOL(Tg) > 1 | NROW(X) != NROW(Tg) | (any(NT != 0) & NROW(NT) != NROW(X) | NROW(NT) != NROW(Tg))) {
     stop("Error: Input not correctly dimensioned", call. = FALSE)
   }
@@ -32,7 +32,7 @@ JV10_likelihood <- function(B, X, Tg, NT = replicate(NROW(X), 0)) {
     L = rowSums(cbind(Wt, Wu))
   } else {
     nn = NCOL(NT)
-    NE = wrap(repmat(X, nn) - NT)
+    NE = wrap(replicate(nn, X, 'matrix') - NT)
     Wn = B[3] / nn * vonmisespdf(NE, 0, B[1])
     L = rowSums(cbind(Wt, Wn, Wu))
   }

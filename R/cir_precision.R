@@ -2,19 +2,22 @@
 #'
 #' \code{cir_sd} takes of vector of radians and returns the circular equivalent of the standard deviation
 #'
-#' @inheritParams JV10_error
+#' @inheritParams bays_2009_error
 #'
 #' @references Adapted from Matlab code by Paul Bays (https://www.paulbays.com/code.php)
 #'
 #' @export
 #'
 cir_precision <- function(X, Tg = 0) {
+
+  if(length(X) != length(Tg) & length(Tg) > 1) {
+    stop("Inputs must have the same length", call. = TRUE)
+  }
+
   if(any(abs(X) > pi) | any(abs(Tg) > pi)) {
-    stop("Error: Input values must be in radians, range -PI to PI", call. = FALSE)
+    stop("Input values must be in radians, range -pi to pi", call. = TRUE)
   }
-  if(any(dim(X)) != any(dim(Tg))) {
-    stop("Error: Inputs must have the same dimensions", call. = FALSE)
-  }
+
 
   E = wrap(X - Tg) # error: diff between response and target
 
