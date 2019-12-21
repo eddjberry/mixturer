@@ -17,4 +17,5 @@ Imports:
     caTools (>= 1.17.1.1),
     circular (>= 0.4.93)
 Suggests: 
-    testthat
+    testthat,
+    covr
