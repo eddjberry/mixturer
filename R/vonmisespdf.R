@@ -3,6 +3,7 @@
 #' \code{randomvonmises}
 #'
 #' @inheritParams randomvonmises
+#' @param X a vector of radians
 #'
 #' @references Adapted from Matlab code by Paul Bays (https://www.paulbays.com/code.php)
 #' Best, D. and Fisher, N. (1979). Applied Statistics, 24, 152-157.

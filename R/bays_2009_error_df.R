@@ -1,8 +1,8 @@
-#' bays_2009_df
+#' bays_2009_error_df
 #'
-#' \code{bays_2009_df}
+#' \code{bays_2009_error_df}
 #'
-#' @inheritParams bays_2009_df
+#' @inheritParams bays_2009_fit_df
 #'
 #' @references Adapted from Matlab code by Paul Bays (https://www.paulbays.com/code.php)
 #' Bays PM, Catalao RFG & Husain M. The precision of visual working
@@ -12,7 +12,7 @@
 #' @export
 #'
 
-bays_2009_df_error <- function(d, id.var = "id", tar.var = "target", res.var = "response"){
+bays_2009_error_df <- function(d, id.var = "id", tar.var = "target", res.var = "response"){
   id <- d[, id.var]
 
   l <- split(d, id)
