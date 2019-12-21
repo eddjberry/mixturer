@@ -2,7 +2,7 @@
 % Please edit documentation in R/randomvonmises.R
 \name{randomvonmises}
 \alias{randomvonmises}
-\title{Random vonmises}
+\title{Random Von Mises}
 \usage{
 randomvonmises(N, MU, K)
 }
@@ -17,6 +17,7 @@ randomvonmises(N, MU, K)
 \code{randomvonmises}
 }
 \references{
-Adapted from Matlab code by Paul Bays (https://www.paulbays.com/code.php)
-Best, D. and Fisher, N. (1979). Applied Statistics, 24, 152-157.
+\itemize{
+\item Adapted from Matlab code by Paul Bays (https://www.paulbays.com/code.php)
+\item Best, D. and Fisher, N. (1979). Applied Statistics, 24, 152-157.}
 }

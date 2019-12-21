@@ -7,6 +7,8 @@
 vonmisespdf(X, MU, K)
 }
 \arguments{
+\item{X}{a vector of radians}
+
 \item{MU}{mean of the distribution}
 
 \item{K}{concentration}
