@@ -4,8 +4,7 @@ Title: Mixture Models for Analogue Response Data
 Date: 2019-12-19
 Version: 0.1.0
 Authors@R: c(
-    person("Berry", "Ed", , "eddjberry@gmail.com", c("aut", "cre", "trl")),
-    person("Bays", "Paul", , "pmb20@cam.ac.uk", c("aut"))
+    person("Berry", "Ed", , "eddjberry@gmail.com", c("aut", "cre", "trl"))
     )
 Description: This packages is an R translations of the Matlab functions to fit the Bays et al. (2009)
     mixture model for continuous response data.
