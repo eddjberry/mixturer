@@ -23,6 +23,11 @@ test_that('circular SD is correct', {
   expect_equal(std, 1.196833, tolerance = 1e-06)
 })
 
+# taken from issue #5
+test_that('sd2k is correct', {
+  expect_equal(sd2k(0.3659424), 7.995975, tolerance = 1e-06)
+})
+
 test_that('sd2k is correct', {
   std = cir_sd(df_test_von_mises$response)
   k = sd2k(std)
