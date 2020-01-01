@@ -1,7 +1,9 @@
 mixturer
 ================
 
-<!-- badges: start --> [![Travis build status](https://travis-ci.org/eddjberry/mixturer.svg?branch=master)](https://travis-ci.org/eddjberry/mixturer) [![Codecov test coverage](https://codecov.io/gh/eddjberry/mixturer/branch/master/graph/badge.svg)](https://codecov.io/gh/eddjberry/mixturer?branch=master) <!-- badges: end -->
+<!-- badges: start --> 
+[![Travis build status](https://travis-ci.org/eddjberry/mixturer.svg?branch=master)](https://travis-ci.org/eddjberry/mixturer) [![Codecov test coverage](https://codecov.io/gh/eddjberry/mixturer/branch/master/graph/badge.svg)](https://codecov.io/gh/eddjberry/mixturer?branch=master) 
+<!-- badges: end -->
 
 Overview
 --------
