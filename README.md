@@ -1,9 +1,7 @@
 mixturer
 ================
 
-<!-- badges: start --> 
-[![Travis build status](https://travis-ci.org/eddjberry/mixturer.svg?branch=master)](https://travis-ci.org/eddjberry/mixturer) [![Codecov test coverage](https://codecov.io/gh/eddjberry/mixturer/branch/master/graph/badge.svg)](https://codecov.io/gh/eddjberry/mixturer?branch=master) 
-<!-- badges: end -->
+<!-- badges: start --> [![Travis build status](https://travis-ci.org/eddjberry/mixturer.svg?branch=master)](https://travis-ci.org/eddjberry/mixturer) [![Codecov test coverage](https://codecov.io/gh/eddjberry/mixturer/branch/master/graph/badge.svg)](https://codecov.io/gh/eddjberry/mixturer?branch=master) <!-- badges: end -->
 
 Overview
 --------
@@ -54,7 +52,7 @@ Citation
 
 Bays PM, Catalao RFG & Husain M. *Journal of Vision* 9(10): 7, 1-11 (2009).
 
-Berry E, & Bays P (2019). mixturer: Mixture Models for Analogue Response Data. R package version 0.1.0.
+Berry E (2019). mixturer: Mixture Models for Analogue Response Data. R package version 0.1.0.
 
 Contributing
 ------------
